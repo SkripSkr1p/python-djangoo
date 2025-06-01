@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru" data-theme="emerald">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <title>{% block title %}Lithium{% endblock title %}</title>
+  <meta name="description" content="Django app example for education purposes">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+
+  {% block css %}
+  <link
+    href="https://cdn.jsdelivr.net/combine/npm/daisyui@5/base/reset.css,npm/daisyui@5/base/svg.css,npm/daisyui@5/base/properties.css,npm/daisyui@5/base/rootscrollgutter.css,npm/daisyui@5/base/rootcolor.css,npm/daisyui@5/base/scrollbar.css,npm/daisyui@5/base/rootscrolllock.css,npm/daisyui@5/components/textarea.css,npm/daisyui@5/components/avatar.css,npm/daisyui@5/components/loading.css,npm/daisyui@5/components/list.css,npm/daisyui@5/components/navbar.css,npm/daisyui@5/components/tab.css,npm/daisyui@5/components/fileinput.css,npm/daisyui@5/components/input.css,npm/daisyui@5/components/table.css,npm/daisyui@5/components/label.css,npm/daisyui@5/components/collapse.css,npm/daisyui@5/components/card.css,npm/daisyui@5/components/hero.css,npm/daisyui@5/components/dropdown.css,npm/daisyui@5/components/radio.css,npm/daisyui@5/components/tooltip.css,npm/daisyui@5/components/filter.css,npm/daisyui@5/components/toggle.css,npm/daisyui@5/components/button.css,npm/daisyui@5/components/link.css,npm/daisyui@5/components/range.css,npm/daisyui@5/components/menu.css,npm/daisyui@5/components/modal.css,npm/daisyui@5/components/toast.css,npm/daisyui@5/components/stat.css,npm/daisyui@5/components/indicator.css,npm/daisyui@5/components/divider.css,npm/daisyui@5/components/alert.css,npm/daisyui@5/components/validator.css,npm/daisyui@5/components/steps.css,npm/daisyui@5/components/status.css,npm/daisyui@5/components/carousel.css,npm/daisyui@5/components/mask.css,npm/daisyui@5/components/rating.css,npm/daisyui@5/components/drawer.css,npm/daisyui@5/components/dock.css,npm/daisyui@5/components/badge.css,npm/daisyui@5/components/stack.css,npm/daisyui@5/components/checkbox.css,npm/daisyui@5/components/calendar.css,npm/daisyui@5/components/timeline.css,npm/daisyui@5/components/fieldset.css,npm/daisyui@5/components/select.css,npm/daisyui@5/theme/emerald.css"
+    rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% endblock %}
+</head>
+
+<body>
+  {% include "partials/nav.html" %}
+  <main>
+    {% block content %}
+    {% endblock content %}
+  </main>
+  {% include "partials/footer.html" %}
+
+  <script src="{% static 'js/base.js' %}"></script>
+  {% block javascript %}{% endblock javascript %}
+</body>
+
+</html>
